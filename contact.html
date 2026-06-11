@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>Contact Us | Bharat Web Azadari</title>
+  <meta name="description" content="Contact Bharat Web Azadari — reach out for inquiries, collaborations, or feedback. Based in Senthal, Bareilly, Uttar Pradesh, India.">
+  <meta name="keywords" content="Contact Bharat Web Azadari, BWA contact, Shia Azadari Bareilly, itsfaizanali5@gmail.com, Senthal Bareilly UP">
+  <meta name="author" content="Bharat Web Azadari">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/bharat-web-azadari/contact.html">
+  <meta property="og:title" content="Contact Us | Bharat Web Azadari">
+  <meta property="og:description" content="Get in touch with Bharat Web Azadari for inquiries, collaborations, or feedback.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:site_name" content="Bharat Web Azadari">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us | Bharat Web Azadari">
+  <meta name="twitter:description" content="Contact Bharat Web Azadari — Senthal, Bareilly, Uttar Pradesh, India.">
+  <meta name="twitter:image" content="assets/logo.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourusername.github.io/bharat-web-azadari/contact.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D4AF37">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    /* ── CRITICAL BUTTON OVERRIDES (inline for guaranteed render) ── */
+    
+    /* All buttons base */
+    .btn-primary, .btn-secondary, .btn-danger, .btn-subscribe, .btn-ghost {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      font-family: inherit !important;
+      font-weight: 600 !important;
+      line-height: 1.2 !important;
+      border-radius: 10px !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      transition: all 0.3s ease !important;
+      padding: 13px 26px !important;
+      font-size: 15px !important;
+      border: 1.5px solid transparent !important;
+    }
+    /* Gold gradient — primary */
+    .btn-primary {
+      background: linear-gradient(135deg, #D4AF37, #E8C84A, #B8962E) !important;
+      color: #0B0B0B !important;
+      box-shadow: 0 2px 14px rgba(212,175,55,0.3) !important;
+    }
+    .btn-primary:hover { transform: translateY(-2px) !important; box-shadow: 0 6px 24px rgba(212,175,55,0.45) !important; }
+    
+    /* Gold outline — secondary */
+    .btn-secondary {
+      background: transparent !important;
+      color: #D4AF37 !important;
+      border-color: rgba(212,175,55,0.6) !important;
+    }
+    .btn-secondary:hover { background: rgba(212,175,55,0.1) !important; border-color: #D4AF37 !important; transform: translateY(-2px) !important; }
+    
+    /* Red YouTube — subscribe */
+    .btn-subscribe {
+      background: #FF0000 !important;
+      color: #fff !important;
+      border-color: transparent !important;
+      box-shadow: 0 2px 12px rgba(255,0,0,0.25) !important;
+    }
+    .btn-subscribe:hover { background: #CC0000 !important; transform: translateY(-2px) !important; box-shadow: 0 6px 22px rgba(255,0,0,0.4) !important; color: #fff !important; }
+    
+    /* Size overrides */
+    .btn-sm { padding: 8px 18px !important; font-size: 13px !important; border-radius: 8px !important; }
+    .btn-lg { padding: 15px 40px !important; font-size: 17px !important; border-radius: 12px !important; }
+    .btn-xs { padding: 6px 12px !important; font-size: 12px !important; border-radius: 7px !important; }
+    .w-full { width: 100% !important; box-sizing: border-box !important; }
+    
+    /* CTA rows / containers */
+    .about-cta-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+    .hero-cta-group { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .stats-cta { text-align: center; margin-top: 32px; }
+    .stats-cta p { color: #aaa; margin-bottom: 16px; font-size: 15px; }
+    
+    /* Subscribe CTA card */
+    .subscribe-cta-card {
+      background: linear-gradient(135deg, rgba(212,175,55,0.07), rgba(212,175,55,0.02));
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 20px;
+      padding: 56px 40px;
+      text-align: center;
+    }
+    .subscribe-cta-icon { font-size: 56px; margin-bottom: 16px; display: block; }
+    .subscribe-cta-card h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; color: #f5f5f5; }
+    .subscribe-cta-card > p { color: #aaa; font-size: 16px; margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    
+    /* Submit button */
+    button[type="submit"].btn-primary, button.btn-primary {
+      width: 100%; padding: 15px 24px !important; font-size: 16px !important; font-weight: 700 !important;
+    }
+    button.btn-secondary { cursor: pointer; }
+    
+    /* Nav cta sizing */
+    .nav-cta { margin-left: 8px; }
+    a.btn-subscribe.nav-cta { padding: 8px 16px !important; font-size: 13px !important; border-radius: 8px !important; }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.png" alt="Bharat Web Azadari Logo" width="48" height="48">
+          <span class="logo-text">Bharat Web <span class="gold">Azadari</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="videos.html" class="nav-link">Videos</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="btn-subscribe nav-cta" style="font-size:13px;padding:8px 16px;"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Subscribe</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__inner">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="programs.html" class="mobile-nav-link">Programs</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="videos.html" class="mobile-nav-link">Videos</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <div class="mobile-menu__divider"></div>
+      <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="btn-subscribe" style="justify-content:center;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Subscribe on YouTube
+      </a>
+    </div>
+  </div>
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" aria-label="Contact Page Hero">
+      <div class="page-hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero-content" data-animate="fade-up">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li aria-hidden="true">›</li>
+              <li aria-current="page">Contact</li>
+            </ol>
+          </nav>
+          <h1 class="page-hero-title">Contact <span class="gold">Us</span></h1>
+          <p class="page-hero-subtitle">We'd love to hear from you — reach out anytime</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <section class="section contact-section" aria-labelledby="contact-form-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ===== LEFT: CONTACT FORM ===== -->
+          <div class="contact-form-col" data-animate="fade-up">
+            <div class="contact-form-card">
+              <div class="form-card-header">
+                <div class="form-icon" aria-hidden="true">✉️</div>
+                <h2 id="contact-form-heading">Send Us a Message</h2>
+                <p>Fill in the form below and we'll get back to you as soon as possible.</p>
+              </div>
+
+              <form id="contact-form" novalidate aria-label="Contact form">
+
+                <!-- Name -->
+                <div class="form-group">
+                  <label class="form-label" for="name">
+                    Your Name <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Enter your name"
+                    required
+                    autocomplete="name"
+                    aria-required="true"
+                    aria-describedby="name-error"
+                  >
+                  <span class="form-error" id="name-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                  <label class="form-label" for="email">
+                    Email Address <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                    aria-describedby="email-error"
+                  >
+                  <span class="form-error" id="email-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Subject -->
+                <div class="form-group">
+                  <label class="form-label" for="subject">
+                    Subject <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input"
+                    placeholder="How can we help?"
+                    required
+                    aria-required="true"
+                    aria-describedby="subject-error"
+                  >
+                  <span class="form-error" id="subject-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Message -->
+                <div class="form-group">
+                  <label class="form-label" for="message">
+                    Message <span class="required" aria-hidden="true">*</span>
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea"
+                    rows="5"
+                    placeholder="Write your message..."
+                    required
+                    maxlength="500"
+                    aria-required="true"
+                    aria-describedby="message-error message-hint"
+                  ></textarea>
+                  <div class="char-counter" id="message-hint" aria-live="polite">
+                    <span id="char-count">0</span>/500 characters
+                  </div>
+                  <span class="form-error" id="message-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <!-- Honeypot (anti-spam, hidden from users) -->
+                <div class="form-honeypot" aria-hidden="true" style="display:none !important; visibility:hidden; position:absolute; left:-9999px;">
+                  <label for="website-url">Leave this blank</label>
+                  <input type="text" id="website-url" name="website" tabindex="-1" autocomplete="off">
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submit-btn" class="btn-primary w-full" aria-label="Send your message">
+                  <span class="submit-text">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                    Send Message
+                  </span>
+                  <span class="submit-loading" style="display:none;" aria-hidden="true">
+                    <span class="spinner-sm"></span>
+                    Sending...
+                  </span>
+                </button>
+
+              </form>
+            </div>
+          </div>
+
+          <!-- ===== RIGHT: CONTACT INFO ===== -->
+          <div class="contact-info-col" data-animate="fade-up">
+
+            <!-- Email Card -->
+            <article class="contact-info-card">
+              <div class="contact-info-icon email-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div class="contact-info-body">
+                <h3>Email</h3>
+                <p>Reach us directly via email for any queries or collaboration requests.</p>
+                <a href="mailto:itsfaizanali5@gmail.com" class="contact-info-link">
+                  itsfaizanali5@gmail.com
+                </a>
+              </div>
+            </article>
+
+            <!-- YouTube Card -->
+            <article class="contact-info-card">
+              <div class="contact-info-icon youtube-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </div>
+              <div class="contact-info-body">
+                <h3>YouTube Channel</h3>
+                <p>Subscribe to our YouTube channel for live streams, Nohay, Majlis, and more.</p>
+                <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="contact-info-link">
+                  @bharatwebazadari ↗
+                </a>
+              </div>
+            </article>
+
+            <!-- Location Card -->
+            <article class="contact-info-card">
+              <div class="contact-info-icon location-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div class="contact-info-body">
+                <h3>Location</h3>
+                <p>We are based in Senthal, Bareilly, covering Azadari programs across the region.</p>
+                <address class="contact-info-address">
+                  Senthal, Bareilly,<br>
+                  Uttar Pradesh, India
+                </address>
+                <a href="https://maps.google.com/?q=Senthal,Bareilly,UttarPradesh,India" target="_blank" rel="noopener noreferrer" class="contact-info-link">
+                  View on Maps ↗
+                </a>
+              </div>
+            </article>
+
+            <!-- Social Links Card -->
+            <article class="contact-info-card social-card">
+              <h3>Follow Us</h3>
+              <p>Stay connected with our latest programs and announcements</p>
+              <div class="contact-social-links">
+                <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="social-link youtube" aria-label="Visit YouTube channel">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  YouTube
+                </a>
+                <a href="mailto:itsfaizanali5@gmail.com" class="social-link email" aria-label="Send email">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                  Email
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== TOAST NOTIFICATION ========== -->
+  <!-- Shown by contact.js on form submit success/error -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="BWA Logo" width="60" height="60">
+          <h3>Bharat Web Azadari</h3>
+          <p>Live Majlis &bull; Juloos &bull; Nohay &bull; Programs</p>
+          <p>Senthal, Bareilly, Uttar Pradesh, India</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="social-link youtube" aria-label="YouTube Channel">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="mailto:itsfaizanali5@gmail.com" class="social-link email" aria-label="Send Email">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email Us
+            </a>
+          </div>
+          <div class="footer-contact">
+            <p>📧 itsfaizanali5@gmail.com</p>
+            <p>📍 Senthal, Bareilly, UP, India</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Bharat Web Azadari. All Rights Reserved.</p>
+        <p>Designed &amp; Developed by <span class="gold">Faizan Ali</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+
+</body>
+</html>

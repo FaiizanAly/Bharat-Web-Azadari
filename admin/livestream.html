@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Live Stream | BWA Admin</title>
+  <link rel="icon" href="../assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout" id="admin-layout">
+
+    <!-- ══════════════════════════════════════════════
+         SIDEBAR
+    ══════════════════════════════════════════════ -->
+    <aside class="admin-sidebar" id="admin-sidebar" aria-label="Admin navigation">
+      <div class="sidebar-header">
+        <img src="../assets/logo.png" alt="BWA" width="40" height="40" onerror="this.style.display='none'">
+        <span class="sidebar-title">BWA Admin</span>
+        <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="programs.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Programs
+        </a>
+        <a href="announcements.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          Announcements
+        </a>
+        <a href="gallery.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          Gallery
+        </a>
+        <a href="livestream.html" class="sidebar-link active" aria-current="page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+          Live Stream
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="../index.html" class="sidebar-link" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          View Website
+        </a>
+        <button class="sidebar-link logout-btn" id="logout-btn" aria-label="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+    <!-- ══════════════════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════════════════ -->
+    <div class="admin-main">
+
+      <!-- Top Header -->
+      <header class="admin-header">
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="false" aria-controls="admin-sidebar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <h1 class="admin-page-title">Live Stream</h1>
+        <div class="admin-header-actions">
+          <span class="admin-badge">Admin</span>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main class="admin-content" id="admin-content">
+
+        <!-- Page Header -->
+        <div class="admin-page-header">
+          <div class="page-header-left">
+            <h2>Live Stream Settings</h2>
+            <p class="page-header-sub">Control the live stream displayed on the home page.</p>
+          </div>
+          <!-- Current status badge (populated by JS) -->
+          <div id="current-status-badge" class="stream-status-badge stream-status-offline" aria-live="polite">
+            <span class="status-dot"></span>
+            <span id="status-badge-text">Offline</span>
+          </div>
+        </div>
+
+        <!-- Loading Skeleton -->
+        <div id="stream-loading" class="livestream-settings">
+          <div class="setting-card">
+            <div class="skeleton skeleton-text" style="height:24px;width:200px;margin-bottom:24px;"></div>
+            <div class="skeleton skeleton-text" style="height:48px;margin-bottom:20px;"></div>
+            <div class="skeleton skeleton-text" style="height:48px;margin-bottom:20px;"></div>
+            <div class="skeleton skeleton-text" style="height:200px;margin-bottom:20px;"></div>
+            <div class="skeleton skeleton-text" style="height:44px;width:150px;"></div>
+          </div>
+        </div>
+
+        <!-- Settings Form (hidden until loaded) -->
+        <div class="livestream-settings" id="stream-settings-form" hidden>
+          <div class="setting-card">
+
+            <!-- ── Section 1: Stream Status ──────────────────────────── -->
+            <div class="setting-section">
+              <div class="setting-section-header">
+                <div class="setting-section-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Stream Status</h3>
+                  <p>Toggle whether the live stream section is visible on the home page.</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="toggle-wrapper">
+                  <label class="toggle-switch" for="is-live-toggle" aria-label="Enable live stream">
+                    <input type="checkbox" id="is-live-toggle" role="switch" aria-checked="false">
+                    <span class="toggle-slider" aria-hidden="true"></span>
+                  </label>
+                  <div class="toggle-label-group">
+                    <span id="live-status-text" class="toggle-label">Offline</span>
+                    <small id="live-status-hint" class="toggle-hint">Stream is currently hidden from visitors.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── Section 2: YouTube URL ────────────────────────────── -->
+            <div class="setting-section">
+              <div class="setting-section-header">
+                <div class="setting-section-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="23 7 16 12 23 17 23 7"/>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>YouTube Stream URL</h3>
+                  <p>Paste your YouTube live URL or video ID below.</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="stream-url">
+                  YouTube URL or Video ID
+                </label>
+                <input
+                  type="url"
+                  id="stream-url"
+                  class="form-input"
+                  placeholder="https://www.youtube.com/live/VIDEOID?si=..."
+                  aria-describedby="stream-url-hint stream-url-error"
+                >
+                <small class="form-hint" id="stream-url-hint">
+                  Accepted formats:
+                  <code>https://youtube.com/watch?v=VIDEOID</code> •
+                  <code>https://youtube.com/live/VIDEOID</code> •
+                  <code>VIDEOID</code>
+                </small>
+                <span class="form-error" id="stream-url-error"></span>
+              </div>
+
+              <!-- Extracted Video ID display -->
+              <div id="video-id-display" class="video-id-chip" hidden>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                Video ID: <strong id="extracted-video-id"></strong>
+              </div>
+            </div>
+
+            <!-- ── Section 3: Stream Preview ─────────────────────────── -->
+            <div class="setting-section">
+              <div class="setting-section-header">
+                <div class="setting-section-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Preview</h3>
+                  <p>See how the embed will look on the home page.</p>
+                </div>
+              </div>
+
+              <div id="stream-preview" class="stream-preview" aria-live="polite">
+                <div class="preview-placeholder" id="preview-placeholder">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polygon points="23 7 16 12 23 17 23 7"/>
+                    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                  </svg>
+                  <p>Enter a YouTube URL above to see preview</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── Section 4: Additional Info ──────────────────────────── -->
+            <div class="setting-section">
+              <div class="setting-section-header">
+                <div class="setting-section-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3>Stream Title <span class="optional-label">(optional)</span></h3>
+                  <p>A short title displayed above the embed on the home page.</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="stream-title">Stream Title</label>
+                <input
+                  type="text"
+                  id="stream-title"
+                  class="form-input"
+                  placeholder="e.g. LIVE: Majlis-e-Aza — Muharram 1st 1447H"
+                  maxlength="150"
+                >
+              </div>
+            </div>
+
+            <!-- ── Save Button ──────────────────────────────────────────── -->
+            <div class="setting-actions">
+              <button class="btn-primary btn-lg" id="save-stream-btn" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+                  <polyline points="17 21 17 13 7 13 7 21"/>
+                  <polyline points="7 3 7 8 15 8"/>
+                </svg>
+                <span id="save-stream-text">Save Settings</span>
+                <svg id="save-stream-spinner" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="display:none; animation:spin 0.8s linear infinite;">
+                  <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                </svg>
+              </button>
+              <span class="save-hint">Changes will reflect on the home page immediately.</span>
+            </div>
+
+          </div>
+
+          <!-- Info Card: Quick Guide -->
+          <div class="setting-card info-card">
+            <h3>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-3px">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              How to Go Live
+            </h3>
+            <ol class="info-steps">
+              <li>
+                <strong>Start streaming</strong> on YouTube Studio or the YouTube app.
+              </li>
+              <li>
+                <strong>Copy your live URL</strong> from YouTube (e.g., <code>https://youtube.com/live/abc123</code>).
+              </li>
+              <li>
+                <strong>Paste the URL</strong> in the field above and toggle the status to <em>Live</em>.
+              </li>
+              <li>
+                <strong>Save settings</strong> — the home page will immediately show the live embed.
+              </li>
+              <li>
+                After the stream ends, toggle the status back to <em>Offline</em> and save.
+              </li>
+            </ol>
+
+            <div class="info-links">
+              <a href="https://studio.youtube.com" target="_blank" rel="noopener" class="info-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                Open YouTube Studio
+              </a>
+              <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener" class="info-link">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+                View BWA Channel
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="../js/config.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/admin/auth.js"></script>
+  <script src="../js/admin/livestream-admin.js"></script>
+
+</body>
+</html>

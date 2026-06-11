@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>404 – Page Not Found | Bharat Web Azadari</title>
+  <meta name="description" content="The page you are looking for could not be found on Bharat Web Azadari.">
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D4AF37">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <style>
+    /* ========================
+       404 PAGE SPECIFIC STYLES
+       ======================== */
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .error-page {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(60px, 10vw, 120px) clamp(16px, 4vw, 40px);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Decorative background glow */
+    .error-page::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .error-page-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      width: 100%;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    /* Logo */
+    .error-logo {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      margin: 0 auto 24px;
+      display: block;
+      filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+    }
+
+    /* 404 Number */
+    .error-code {
+      font-size: clamp(80px, 18vw, 160px);
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #D4AF37, #E8C84A, #B8962E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0 8px;
+      letter-spacing: -4px;
+      text-shadow: none;
+    }
+
+    /* Heading */
+    .error-title {
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    /* Message */
+    .error-message {
+      font-size: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0 0 36px;
+    }
+
+    /* Divider */
+    .error-divider {
+      width: 60px;
+      height: 2px;
+      background: var(--gold-gradient);
+      margin: 24px auto;
+      border-radius: 2px;
+    }
+
+    /* CTA Buttons */
+    .error-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    /* Quick Links */
+    .error-quick-links {
+      margin-top: 32px;
+    }
+
+    .error-quick-links p {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .error-nav-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .error-nav-link {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .error-nav-link:hover {
+      color: var(--gold);
+      border-color: var(--border-hover);
+      background: rgba(212, 175, 55, 0.05);
+    }
+
+    /* Inline countdown auto-redirect */
+    .error-redirect-notice {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 24px;
+    }
+
+    .error-redirect-notice span {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== MINIMAL HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.png" alt="Bharat Web Azadari Logo" width="48" height="48">
+          <span class="logo-text">Bharat Web <span class="gold">Azadari</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="videos.html" class="nav-link">Videos</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="btn-primary btn-sm nav-cta">▶ YouTube</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========== 404 CONTENT ========== -->
+  <main>
+    <section class="error-page" aria-label="Page not found">
+      <div class="error-page-inner">
+
+        <!-- Logo -->
+        <img src="assets/logo.png" alt="Bharat Web Azadari Logo" class="error-logo" width="90" height="90">
+
+        <!-- 404 Number -->
+        <p class="error-code" aria-label="Error 404">404</p>
+
+        <!-- Heading -->
+        <h1 class="error-title">Page Not Found</h1>
+
+        <div class="error-divider" aria-hidden="true"></div>
+
+        <!-- Message -->
+        <p class="error-message">
+          Oops! The page you're looking for doesn't exist or may have been moved.
+          Don't worry — head back to the home page or explore our content below.
+        </p>
+
+        <!-- Primary CTA -->
+        <div class="error-actions">
+          <a href="index.html" class="btn-primary btn-lg">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            Back to Home
+          </a>
+          <a href="programs.html" class="btn-secondary btn-lg">View Programs</a>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="error-quick-links">
+          <p>Or navigate to one of these pages:</p>
+          <nav class="error-nav-links" aria-label="Quick navigation">
+            <a href="about.html" class="error-nav-link">About</a>
+            <a href="gallery.html" class="error-nav-link">Gallery</a>
+            <a href="videos.html" class="error-nav-link">Videos</a>
+            <a href="contact.html" class="error-nav-link">Contact</a>
+            <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="error-nav-link">YouTube ↗</a>
+          </nav>
+        </div>
+
+        <!-- Auto-redirect notice -->
+        <p class="error-redirect-notice" id="redirect-notice" aria-live="polite">
+          Redirecting to home page in <span id="countdown">10</span> seconds...
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="BWA Logo" width="60" height="60">
+          <h3>Bharat Web Azadari</h3>
+          <p>Live Majlis &bull; Juloos &bull; Nohay &bull; Programs</p>
+          <p>Senthal, Bareilly, Uttar Pradesh, India</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="social-link youtube" aria-label="YouTube Channel">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="mailto:itsfaizanali5@gmail.com" class="social-link email" aria-label="Send Email">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email Us
+            </a>
+          </div>
+          <div class="footer-contact">
+            <p>📧 itsfaizanali5@gmail.com</p>
+            <p>📍 Senthal, Bareilly, UP, India</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Bharat Web Azadari. All Rights Reserved.</p>
+        <p>Designed &amp; Developed by <span class="gold">Faizan Ali</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/main.js"></script>
+  <script>
+    /* Auto-redirect countdown for 404 page */
+    (function () {
+      var seconds = 10;
+      var countdownEl = document.getElementById('countdown');
+      var timer = setInterval(function () {
+        seconds--;
+        if (countdownEl) countdownEl.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(timer);
+          window.location.href = 'index.html';
+        }
+      }, 1000);
+
+      /* Cancel redirect if user clicks a link */
+      document.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          clearInterval(timer);
+          var notice = document.getElementById('redirect-notice');
+          if (notice) notice.style.display = 'none';
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

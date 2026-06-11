@@ -1,0 +1,516 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary SEO -->
+  <title>About Us | Bharat Web Azadari</title>
+  <meta name="description" content="Learn about Bharat Web Azadari (BWA) — a dedicated digital media platform for Shia Azadari from Senthal, Bareilly, UP. Our mission, vision, and coverage.">
+  <meta name="keywords" content="About Bharat Web Azadari, BWA, Shia Azadari platform, Live Majlis Bareilly, Juloos coverage, Muharram, Imam Hussain, Karbala">
+  <meta name="author" content="Bharat Web Azadari">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/bharat-web-azadari/about.html">
+  <meta property="og:title" content="About Us | Bharat Web Azadari">
+  <meta property="og:description" content="Bharat Web Azadari is a dedicated digital media platform for Shia Azadari from Senthal, Bareilly, Uttar Pradesh.">
+  <meta property="og:image" content="assets/logo.png">
+  <meta property="og:site_name" content="Bharat Web Azadari">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Bharat Web Azadari">
+  <meta name="twitter:description" content="Bharat Web Azadari — Live Majlis, Juloos, Nohay and Muharram programs from Senthal, Bareilly, UP.">
+  <meta name="twitter:image" content="assets/logo.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yourusername.github.io/bharat-web-azadari/about.html">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#D4AF37">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- JSON-LD: Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Bharat Web Azadari",
+    "alternateName": "BWA",
+    "url": "https://yourusername.github.io/bharat-web-azadari/",
+    "logo": "assets/logo.png",
+    "description": "A dedicated digital media platform committed to preserving and broadcasting the sacred traditions of Shia Azadari from Senthal, Bareilly, Uttar Pradesh, India.",
+    "email": "itsfaizanali5@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Senthal",
+      "addressRegion": "Bareilly, Uttar Pradesh",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://youtube.com/@bharatwebazadari"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ── CRITICAL BUTTON OVERRIDES (inline for guaranteed render) ── */
+    
+    /* All buttons base */
+    .btn-primary, .btn-secondary, .btn-danger, .btn-subscribe, .btn-ghost {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 8px !important;
+      font-family: inherit !important;
+      font-weight: 600 !important;
+      line-height: 1.2 !important;
+      border-radius: 10px !important;
+      cursor: pointer !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+      transition: all 0.3s ease !important;
+      padding: 13px 26px !important;
+      font-size: 15px !important;
+      border: 1.5px solid transparent !important;
+    }
+    /* Gold gradient — primary */
+    .btn-primary {
+      background: linear-gradient(135deg, #D4AF37, #E8C84A, #B8962E) !important;
+      color: #0B0B0B !important;
+      box-shadow: 0 2px 14px rgba(212,175,55,0.3) !important;
+    }
+    .btn-primary:hover { transform: translateY(-2px) !important; box-shadow: 0 6px 24px rgba(212,175,55,0.45) !important; }
+    
+    /* Gold outline — secondary */
+    .btn-secondary {
+      background: transparent !important;
+      color: #D4AF37 !important;
+      border-color: rgba(212,175,55,0.6) !important;
+    }
+    .btn-secondary:hover { background: rgba(212,175,55,0.1) !important; border-color: #D4AF37 !important; transform: translateY(-2px) !important; }
+    
+    /* Red YouTube — subscribe */
+    .btn-subscribe {
+      background: #FF0000 !important;
+      color: #fff !important;
+      border-color: transparent !important;
+      box-shadow: 0 2px 12px rgba(255,0,0,0.25) !important;
+    }
+    .btn-subscribe:hover { background: #CC0000 !important; transform: translateY(-2px) !important; box-shadow: 0 6px 22px rgba(255,0,0,0.4) !important; color: #fff !important; }
+    
+    /* Size overrides */
+    .btn-sm { padding: 8px 18px !important; font-size: 13px !important; border-radius: 8px !important; }
+    .btn-lg { padding: 15px 40px !important; font-size: 17px !important; border-radius: 12px !important; }
+    .btn-xs { padding: 6px 12px !important; font-size: 12px !important; border-radius: 7px !important; }
+    .w-full { width: 100% !important; box-sizing: border-box !important; }
+    
+    /* CTA rows / containers */
+    .about-cta-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+    .hero-cta-group { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .stats-cta { text-align: center; margin-top: 32px; }
+    .stats-cta p { color: #aaa; margin-bottom: 16px; font-size: 15px; }
+    
+    /* Subscribe CTA card */
+    .subscribe-cta-card {
+      background: linear-gradient(135deg, rgba(212,175,55,0.07), rgba(212,175,55,0.02));
+      border: 1px solid rgba(212,175,55,0.2);
+      border-radius: 20px;
+      padding: 56px 40px;
+      text-align: center;
+    }
+    .subscribe-cta-icon { font-size: 56px; margin-bottom: 16px; display: block; }
+    .subscribe-cta-card h2 { font-size: 28px; font-weight: 800; margin-bottom: 12px; color: #f5f5f5; }
+    .subscribe-cta-card > p { color: #aaa; font-size: 16px; margin-bottom: 28px; max-width: 480px; margin-left: auto; margin-right: auto; }
+    
+    /* Submit button */
+    button[type="submit"].btn-primary, button.btn-primary {
+      width: 100%; padding: 15px 24px !important; font-size: 16px !important; font-weight: 700 !important;
+    }
+    button.btn-secondary { cursor: pointer; }
+    
+    /* Nav cta sizing */
+    .nav-cta { margin-left: 8px; }
+    a.btn-subscribe.nav-cta { padding: 8px 16px !important; font-size: 13px !important; border-radius: 8px !important; }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/logo.png" alt="Bharat Web Azadari Logo" width="48" height="48">
+          <span class="logo-text">Bharat Web <span class="gold">Azadari</span></span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="videos.html" class="nav-link">Videos</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="btn-subscribe nav-cta" style="font-size:13px;padding:8px 16px;"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Subscribe</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu__inner">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="programs.html" class="mobile-nav-link">Programs</a>
+      <a href="gallery.html" class="mobile-nav-link">Gallery</a>
+      <a href="videos.html" class="mobile-nav-link">Videos</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <div class="mobile-menu__divider"></div>
+      <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="btn-subscribe" style="justify-content:center;">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Subscribe on YouTube
+      </a>
+    </div>
+  </div>
+  <main>
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" aria-label="About Us Page Hero">
+      <div class="page-hero-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="page-hero-content" data-animate="fade-up">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li aria-hidden="true">›</li>
+              <li aria-current="page">About Us</li>
+            </ol>
+          </nav>
+          <h1 class="page-hero-title">About <span class="gold">Us</span></h1>
+          <p class="page-hero-subtitle">Who we are and what drives our mission</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MAIN ABOUT SECTION ========== -->
+    <section class="section about-main-section" aria-labelledby="about-main-heading">
+      <div class="container">
+        <div class="about-main-grid" data-animate="fade-up">
+          <!-- Logo & Image Side -->
+          <div class="about-visual">
+            <div class="about-logo-card">
+              <img src="assets/logo.png" alt="Bharat Web Azadari Logo" class="about-logo-img" width="200" height="200">
+              <div class="about-logo-glow" aria-hidden="true"></div>
+            </div>
+            <div class="about-badge-wrap">
+              <span class="about-badge">
+                <span class="live-dot"></span>
+                Broadcasting Since Day One
+              </span>
+            </div>
+          </div>
+
+          <!-- Text Side -->
+          <div class="about-text">
+            <span class="section-badge">Our Story</span>
+            <h2 class="section-title" id="about-main-heading">Bharat Web <span class="gold">Azadari</span></h2>
+            <p class="about-para lead">
+              Bharat Web Azadari is a dedicated digital media platform committed to preserving and broadcasting the sacred traditions of Shia Azadari.
+            </p>
+            <p class="about-para">
+              Founded in Senthal, Bareilly, Uttar Pradesh, we serve the global Shia community by providing live and recorded coverage of Majlis, Juloos, Nohay programs, and Muharram events. Our mission is to ensure that the teachings of Karbala and the message of Imam Hussain (A.S.) reach every corner of the world through modern digital media.
+            </p>
+            <p class="about-para">
+              Through our YouTube channel and this website, we strive to connect the Shia community — whether local or worldwide — by making Azadari accessible to all. We believe that the message of Karbala is timeless and must continue to be shared through every available medium.
+            </p>
+            <p class="about-para">
+              Our team works tirelessly during Muharram and throughout the year to document and broadcast every Majlis, Juloos, and Nohay program, ensuring high-quality coverage that honors the sanctity of these events.
+            </p>
+
+            <!-- Quick Info Tags -->
+            <div class="about-tags">
+              <span class="tag">📍 Senthal, Bareilly, UP</span>
+              <span class="tag">🎥 Live Streaming</span>
+              <span class="tag">🌐 Global Reach</span>
+              <span class="tag">📺 YouTube Channel</span>
+            </div>
+
+            <div class="about-cta-row">
+              <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="btn-subscribe"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>Subscribe on YouTube</a>
+              <a href="contact.html" class="btn-secondary">✉️ Get In Touch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MISSION & VISION ========== -->
+    <section class="section mission-vision-section" aria-labelledby="mission-vision-heading">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-badge">Our Purpose</span>
+          <h2 class="section-title" id="mission-vision-heading">Mission &amp; Vision</h2>
+          <p class="section-subtitle">The values that guide everything we do</p>
+        </div>
+
+        <div class="mission-vision-grid" data-animate="fade-up">
+          <!-- Mission Card -->
+          <article class="mv-card mission-card">
+            <div class="mv-icon" aria-hidden="true">🎯</div>
+            <h3 class="mv-title">Our Mission</h3>
+            <p class="mv-text">
+              To provide authentic, high-quality Azadari content to the global Shia community. We are committed to live and recorded coverage of Majlis, Juloos, and Nohay programs, ensuring that the message of Imam Hussain (A.S.) and the teachings of Karbala remain accessible to all believers — regardless of their location.
+            </p>
+            <ul class="mv-points">
+              <li>✦ Live broadcasts of Majlis programs</li>
+              <li>✦ High-quality Nohay recordings</li>
+              <li>✦ Complete Juloos procession coverage</li>
+              <li>✦ Muharram event documentation</li>
+            </ul>
+          </article>
+
+          <!-- Vision Card -->
+          <article class="mv-card vision-card">
+            <div class="mv-icon" aria-hidden="true">🌟</div>
+            <h3 class="mv-title">Our Vision</h3>
+            <p class="mv-text">
+              To become the leading digital platform for Shia Azadari in India and beyond. We envision a future where every believer, no matter where they are in the world, can participate in the sacred traditions of Azadari through our digital platform — keeping the flame of Karbala burning bright.
+            </p>
+            <ul class="mv-points">
+              <li>✦ Premier Azadari platform in India</li>
+              <li>✦ Reaching every corner of the world</li>
+              <li>✦ Preserving Azadari for generations</li>
+              <li>✦ Building a global Shia community</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COVERAGE SECTION ========== -->
+    <section class="section coverage-section" aria-labelledby="coverage-heading">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-badge">What We Cover</span>
+          <h2 class="section-title" id="coverage-heading">Our Coverage</h2>
+          <p class="section-subtitle">Comprehensive Azadari media from every angle</p>
+        </div>
+
+        <div class="coverage-grid" data-animate="fade-up">
+
+          <!-- Live Majlis -->
+          <article class="coverage-card">
+            <div class="coverage-icon" aria-hidden="true">🕌</div>
+            <h3 class="coverage-title">Live Majlis</h3>
+            <p class="coverage-text">
+              Real-time live streaming of Majlis programs from Senthal, Bareilly and surrounding areas. Watch Zakirs and scholars deliver the message of Karbala live on our platform.
+            </p>
+            <div class="coverage-tag">Live Streaming</div>
+          </article>
+
+          <!-- Juloos -->
+          <article class="coverage-card">
+            <div class="coverage-icon" aria-hidden="true">🚶</div>
+            <h3 class="coverage-title">Juloos</h3>
+            <p class="coverage-text">
+              Full coverage of Juloos processions including Alam, Tazia, and other sacred processions during Muharram and other religious occasions throughout the year.
+            </p>
+            <div class="coverage-tag">Processions</div>
+          </article>
+
+          <!-- Nohay Programs -->
+          <article class="coverage-card">
+            <div class="coverage-icon" aria-hidden="true">🎶</div>
+            <h3 class="coverage-title">Nohay Programs</h3>
+            <p class="coverage-text">
+              Soulful Nohay performances by renowned local and national Nohakhans. Experience the spiritual depth and emotional power of Azadari through our Nohay recordings.
+            </p>
+            <div class="coverage-tag">Nohay</div>
+          </article>
+
+          <!-- Muharram Events -->
+          <article class="coverage-card">
+            <div class="coverage-icon" aria-hidden="true">📅</div>
+            <h3 class="coverage-title">Muharram Events</h3>
+            <p class="coverage-text">
+              Comprehensive coverage of Muharram events including Ashura programs, Chehlum, and other significant dates in the Islamic calendar observed by the Shia community.
+            </p>
+            <div class="coverage-tag">Annual Events</div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COVERAGE AREA ========== -->
+    <section class="section coverage-area-section" aria-labelledby="area-heading">
+      <div class="container">
+        <div class="coverage-area-grid" data-animate="fade-up">
+          <!-- Text -->
+          <div class="area-text">
+            <span class="section-badge">Location</span>
+            <h2 class="section-title" id="area-heading">Our Coverage <span class="gold">Area</span></h2>
+            <p class="area-para">
+              Based in <strong class="gold">Senthal, Bareilly</strong>, Uttar Pradesh, we primarily cover Azadari programs in the Bareilly region, including surrounding towns and villages.
+            </p>
+            <p class="area-para">
+              Our digital platform ensures that our content reaches the global Shia community — from India to other parts of the world. Through YouTube and our website, geography is no longer a barrier to participating in Azadari.
+            </p>
+            <div class="area-locations">
+              <div class="location-item">
+                <span class="location-dot" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Senthal, Bareilly</strong>
+                  <span>Primary Base</span>
+                </div>
+              </div>
+              <div class="location-item">
+                <span class="location-dot" aria-hidden="true">📍</span>
+                <div>
+                  <strong>Bareilly District, UP</strong>
+                  <span>Regional Coverage</span>
+                </div>
+              </div>
+              <div class="location-item">
+                <span class="location-dot" aria-hidden="true">🌐</span>
+                <div>
+                  <strong>Global</strong>
+                  <span>Digital Reach via YouTube</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Card -->
+          <div class="area-map-card">
+            <div class="map-placeholder" aria-label="Location: Senthal, Bareilly, Uttar Pradesh, India">
+              <div class="map-pin" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="48" height="48" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <p class="map-label">Senthal, Bareilly</p>
+              <p class="map-sublabel">Uttar Pradesh, India</p>
+              <a href="https://maps.google.com/?q=Senthal,Bareilly,UttarPradesh,India" target="_blank" rel="noopener noreferrer" class="btn-secondary btn-sm">
+                Open in Maps ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CHANNEL STATS ========== -->
+    <section class="section channel-stats-section" aria-labelledby="stats-heading">
+      <div class="container">
+        <div class="section-header" data-animate="fade-up">
+          <span class="section-badge">YouTube</span>
+          <h2 class="section-title" id="stats-heading">Our Channel</h2>
+          <p class="section-subtitle">Join our growing community on YouTube</p>
+        </div>
+
+        <div class="stats-grid" data-animate="fade-up">
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">👁️</div>
+            <div class="stat-number gold">Growing</div>
+            <div class="stat-label">Total Views</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">👥</div>
+            <div class="stat-number gold">Active</div>
+            <div class="stat-label">Subscribers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">🎥</div>
+            <div class="stat-number gold">100+</div>
+            <div class="stat-label">Videos</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon" aria-hidden="true">📡</div>
+            <div class="stat-number gold">Live</div>
+            <div class="stat-label">Streaming</div>
+          </div>
+        </div>
+
+        <div class="stats-cta" data-animate="fade-up">
+          <p>Be part of our community — subscribe and never miss a program!</p>
+          <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="btn-subscribe btn-lg">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Subscribe to Bharat Web Azadari
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="BWA Logo" width="60" height="60">
+          <h3>Bharat Web Azadari</h3>
+          <p>Live Majlis &bull; Juloos &bull; Nohay &bull; Programs</p>
+          <p>Senthal, Bareilly, Uttar Pradesh, India</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-links">
+            <a href="https://youtube.com/@bharatwebazadari" target="_blank" rel="noopener noreferrer" class="social-link youtube" aria-label="YouTube Channel">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
+            <a href="mailto:itsfaizanali5@gmail.com" class="social-link email" aria-label="Send Email">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Email Us
+            </a>
+          </div>
+          <div class="footer-contact">
+            <p>📧 itsfaizanali5@gmail.com</p>
+            <p>📍 Senthal, Bareilly, UP, India</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Bharat Web Azadari. All Rights Reserved.</p>
+        <p>Designed &amp; Developed by <span class="gold">Faizan Ali</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
