@@ -1,0 +1,21 @@
+# Robots.txt — Bharat Web Azadari
+# Controls which pages search engine crawlers can access
+
+# Allow all crawlers
+User-agent: *
+
+# Allow the entire public website
+Allow: /
+
+# Block the admin panel from being indexed
+Disallow: /admin/
+
+# Block the backend source code from being indexed
+Disallow: /google-apps-script/
+
+# Block any potential build/dev files
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap location — helps search engines find all your pages
+Sitemap: https://yourusername.github.io/bharat-web-azadari/sitemap.xml

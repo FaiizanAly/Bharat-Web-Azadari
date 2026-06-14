@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Gallery | BWA Admin</title>
+  <link rel="icon" href="../assets/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/admin.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout" id="admin-layout">
+
+    <!-- ══════════════════════════════════════════════
+         SIDEBAR
+    ══════════════════════════════════════════════ -->
+    <aside class="admin-sidebar" id="admin-sidebar" aria-label="Admin navigation">
+      <div class="sidebar-header">
+        <img src="../assets/logo.png" alt="BWA" width="40" height="40" onerror="this.style.display='none'">
+        <span class="sidebar-title">BWA Admin</span>
+        <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Main navigation">
+        <a href="dashboard.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="programs.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Programs
+        </a>
+        <a href="announcements.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          Announcements
+        </a>
+        <a href="gallery.html" class="sidebar-link active" aria-current="page">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          Gallery
+        </a>
+        <a href="livestream.html" class="sidebar-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="23 7 16 12 23 17 23 7"/>
+            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+          </svg>
+          Live Stream
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="../index.html" class="sidebar-link" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          View Website
+        </a>
+        <button class="sidebar-link logout-btn" id="logout-btn" aria-label="Logout">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Logout
+        </button>
+      </div>
+    </aside>
+
+    <!-- Sidebar Overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebar-overlay" aria-hidden="true"></div>
+
+    <!-- ══════════════════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════════════════ -->
+    <div class="admin-main">
+
+      <!-- Top Header -->
+      <header class="admin-header">
+        <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar" aria-expanded="false" aria-controls="admin-sidebar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+        <h1 class="admin-page-title">Gallery</h1>
+        <div class="admin-header-actions">
+          <span class="admin-badge">Admin</span>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main class="admin-content" id="admin-content">
+
+        <!-- Page Header Row -->
+        <div class="admin-page-header">
+          <div class="page-header-left">
+            <h2>Manage Gallery</h2>
+            <p class="page-header-sub">Add or remove photos from the public gallery.</p>
+          </div>
+          <button class="btn-primary" id="add-image-btn" aria-label="Add new image">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            Add Image
+          </button>
+        </div>
+
+        <!-- Toolbar: Search + Filter -->
+        <div class="gallery-toolbar">
+          <div class="search-bar">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input
+              type="search"
+              id="gallery-search"
+              class="search-input"
+              placeholder="Search by caption..."
+              aria-label="Search gallery images"
+            >
+          </div>
+          <div class="filter-tabs" role="group" aria-label="Filter by category">
+            <button class="filter-tab active" data-filter="all" type="button">All</button>
+            <button class="filter-tab" data-filter="Majlis" type="button">Majlis</button>
+            <button class="filter-tab" data-filter="Juloos" type="button">Juloos</button>
+            <button class="filter-tab" data-filter="Programs" type="button">Programs</button>
+            <button class="filter-tab" data-filter="Other" type="button">Other</button>
+          </div>
+        </div>
+
+        <!-- Image Count -->
+        <p class="gallery-count" id="gallery-count-text" aria-live="polite"></p>
+
+        <!-- Gallery Grid -->
+        <div
+          class="gallery-admin-grid"
+          id="gallery-admin-grid"
+          role="list"
+          aria-label="Gallery images"
+        >
+          <!-- Skeleton items while loading -->
+          <div class="gallery-admin-item skeleton-card" role="listitem" aria-hidden="true">
+            <div class="skeleton skeleton-img"></div>
+          </div>
+          <div class="gallery-admin-item skeleton-card" role="listitem" aria-hidden="true">
+            <div class="skeleton skeleton-img"></div>
+          </div>
+          <div class="gallery-admin-item skeleton-card" role="listitem" aria-hidden="true">
+            <div class="skeleton skeleton-img"></div>
+          </div>
+          <div class="gallery-admin-item skeleton-card" role="listitem" aria-hidden="true">
+            <div class="skeleton skeleton-img"></div>
+          </div>
+          <div class="gallery-admin-item skeleton-card" role="listitem" aria-hidden="true">
+            <div class="skeleton skeleton-img"></div>
+          </div>
+          <div class="gallery-admin-item skeleton-card" role="listitem" aria-hidden="true">
+            <div class="skeleton skeleton-img"></div>
+          </div>
+        </div>
+
+        <!-- Empty state -->
+        <div class="empty-state" id="gallery-empty" hidden>
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <h3>No Images Yet</h3>
+          <p>Click "Add Image" to upload your first photo to the gallery.</p>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       ADD IMAGE MODAL
+  ══════════════════════════════════════════════ -->
+  <div class="modal" id="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title" hidden>
+    <div class="modal-overlay" id="gallery-modal-overlay" aria-hidden="true"></div>
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h3 class="modal-title" id="gallery-modal-title">Add Image</h3>
+        <button class="modal-close" id="gallery-modal-close" aria-label="Close modal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <form id="gallery-form" novalidate>
+          <!-- Hidden ID for edit mode -->
+          <input type="hidden" id="gallery-image-id">
+
+          <!-- Image URL -->
+          <div class="form-group">
+            <label class="form-label" for="gallery-image-url">
+              Image URL <span class="required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="url"
+              id="gallery-image-url"
+              class="form-input"
+              placeholder="https://i.imgur.com/example.jpg"
+              required
+              aria-required="true"
+            >
+            <small class="form-hint">
+              Upload to
+              <a href="https://imgur.com/upload" target="_blank" rel="noopener">Imgur</a>,
+              <a href="https://postimages.org/" target="_blank" rel="noopener">PostImages</a>,
+              or Google Drive and paste the direct link here.
+            </small>
+            <span class="form-error" id="gallery-url-error"></span>
+          </div>
+
+          <!-- Image Preview -->
+          <div id="gallery-image-preview" class="gallery-modal-preview" aria-live="polite">
+            <div class="preview-placeholder">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <circle cx="8.5" cy="8.5" r="1.5"/>
+                <polyline points="21 15 16 10 5 21"/>
+              </svg>
+              <span>Preview will appear here</span>
+            </div>
+          </div>
+
+          <!-- Caption -->
+          <div class="form-group">
+            <label class="form-label" for="gallery-caption">Caption</label>
+            <input
+              type="text"
+              id="gallery-caption"
+              class="form-input"
+              placeholder="e.g. Juloos-e-Ashura 2024 — Senthal"
+              maxlength="200"
+            >
+          </div>
+
+          <!-- Category -->
+          <div class="form-group">
+            <label class="form-label" for="gallery-category">
+              Category <span class="required" aria-hidden="true">*</span>
+            </label>
+            <select id="gallery-category" class="form-input form-select" required aria-required="true">
+              <option value="" disabled selected>Select a category</option>
+              <option value="Majlis">Majlis</option>
+              <option value="Juloos">Juloos</option>
+              <option value="Programs">Programs</option>
+              <option value="Other">Other</option>
+            </select>
+            <span class="form-error" id="gallery-cat-error"></span>
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn-secondary" id="gallery-cancel-btn" type="button">Cancel</button>
+        <button class="btn-primary" id="gallery-save-btn" type="button">
+          <span id="gallery-save-text">Save Image</span>
+          <svg id="gallery-save-spinner" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="display:none; animation:spin 0.8s linear infinite;">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Confirm Delete Dialog -->
+  <div class="modal" id="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirm-title" hidden>
+    <div class="modal-overlay" id="confirm-modal-overlay" aria-hidden="true"></div>
+    <div class="modal-content modal-content--sm">
+      <div class="modal-header">
+        <h3 class="modal-title" id="confirm-title">Delete Image?</h3>
+      </div>
+      <div class="modal-body">
+        <p class="confirm-message">Are you sure you want to delete this image from the gallery? This action cannot be undone.</p>
+        <div id="confirm-preview-img" class="confirm-image-preview"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="confirm-cancel-btn" type="button">Cancel</button>
+        <button class="btn-danger" id="confirm-delete-btn" type="button">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Scripts -->
+  <script src="../js/config.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/admin/auth.js"></script>
+  <script src="../js/admin/gallery-admin.js"></script>
+
+</body>
+</html>

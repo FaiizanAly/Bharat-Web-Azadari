@@ -1,0 +1,558 @@
+/* ============================================================
+   BHARAT WEB AZADARI — Mobile & Responsive Stylesheet
+   mobile.css | Loaded on every page after main.css
+   ============================================================ */
+
+/* ── 1. NAVIGATION — MOBILE ────────────────────────────────── */
+
+/* Always show solid header on mobile */
+@media (max-width: 768px) {
+  .site-header {
+    background: rgba(11, 11, 11, 0.97) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+    backdrop-filter: blur(12px) !important;
+  }
+
+  /* Hide desktop nav */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 5px !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    background: rgba(212, 175, 55, 0.08) !important;
+    border: 1.5px solid rgba(212, 175, 55, 0.3) !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hamburger bars */
+  .hamburger span,
+  .hamburger .hamburger__bar {
+    display: block !important;
+    width: 22px !important;
+    height: 2px !important;
+    background: #D4AF37 !important;
+    border-radius: 2px !important;
+    transition: all 0.3s ease !important;
+    transform-origin: center !important;
+  }
+
+  /* Hamburger → X */
+  .hamburger.open span:nth-child(1),
+  .hamburger.open .hamburger__bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg) !important;
+  }
+  .hamburger.open span:nth-child(2),
+  .hamburger.open .hamburger__bar:nth-child(2) {
+    opacity: 0 !important;
+    transform: scaleX(0) !important;
+  }
+  .hamburger.open span:nth-child(3),
+  .hamburger.open .hamburger__bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg) !important;
+  }
+
+  /* Mobile menu panel */
+  .mobile-menu {
+    display: block !important;
+    position: fixed !important;
+    top: var(--header-height, 70px) !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: rgba(10, 10, 10, 0.99) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+    z-index: 998 !important;
+    max-height: calc(100vh - var(--header-height, 70px)) !important;
+    overflow-y: auto !important;
+    /* Hidden state */
+    transform: translateY(-8px) !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: transform 0.28s ease, opacity 0.28s ease, visibility 0.28s ease !important;
+  }
+
+  /* Open state */
+  .mobile-menu.open {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  /* Inner padding */
+  .mobile-menu__inner {
+    padding: 16px 20px 32px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+
+  /* Mobile nav links */
+  .mobile-nav-link {
+    display: flex !important;
+    align-items: center !important;
+    padding: 13px 16px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #cccccc !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    border-left: 3px solid transparent !important;
+    transition: all 0.2s ease !important;
+  }
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: #D4AF37 !important;
+    background: rgba(212, 175, 55, 0.07) !important;
+    border-left-color: #D4AF37 !important;
+  }
+
+  .mobile-menu__divider {
+    height: 1px !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    margin: 10px 0 !important;
+  }
+
+  /* Subscribe button in mobile menu */
+  .mobile-menu__inner .btn-subscribe {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 15px !important;
+    padding: 13px 20px !important;
+  }
+
+  /* Lock body scroll when menu open */
+  body.nav-open {
+    overflow: hidden !important;
+  }
+}
+
+/* ── 2. HERO SECTION ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh !important;
+    padding-top: var(--header-height, 70px) !important;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 9vw, 48px) !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero-tagline {
+    font-size: 14px !important;
+    padding: 0 16px !important;
+  }
+
+  .hero-cta-group {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 0 8px !important;
+    max-width: 340px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-secondary,
+  .hero-cta-group .btn-subscribe {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .hero-scroll-indicator { display: none !important; }
+}
+
+/* ── 3. PAGE HERO (inner pages) ─────────────────────────────── */
+@media (max-width: 768px) {
+  .page-hero {
+    padding: calc(var(--header-height, 70px) + 36px) 0 36px !important;
+    text-align: center !important;
+  }
+
+  .page-hero-title {
+    font-size: clamp(26px, 8vw, 40px) !important;
+  }
+
+  .page-hero-subtitle {
+    font-size: 14px !important;
+  }
+
+  .breadcrumb ol {
+    justify-content: center !important;
+  }
+}
+
+/* ── 4. LAYOUT & SECTIONS ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .section {
+    padding-block: 48px !important;
+  }
+
+  .container {
+    padding-inline: 18px !important;
+  }
+
+  .section-header {
+    text-align: center !important;
+    margin-bottom: 32px !important;
+  }
+
+  .section-title {
+    font-size: clamp(22px, 6vw, 32px) !important;
+  }
+
+  .section-subtitle {
+    font-size: 14px !important;
+    max-width: 100% !important;
+  }
+
+  .section-footer {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .section-footer .btn-primary,
+  .section-footer .btn-secondary,
+  .section-footer .btn-subscribe {
+    width: 100% !important;
+    max-width: 340px !important;
+    justify-content: center !important;
+  }
+}
+
+/* ── 5. VIDEO GRIDS ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .home-videos-grid,
+  .videos-fixed-grid,
+  .videos-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .home-videos-grid,
+  .videos-fixed-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ── 6. ABOUT PAGE ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .about-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .about-logo-card {
+    max-width: 180px !important;
+    margin: 0 auto !important;
+  }
+
+  .about-tags {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+  }
+
+  .about-cta-row {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .about-cta-row .btn-subscribe,
+  .about-cta-row .btn-secondary {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .about-snippet-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .about-snippet-deco {
+    display: none !important;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .coverage-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+
+  .coverage-area-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .coverage-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 7. STATS GRID ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 14px !important;
+  }
+
+  .stats-cta {
+    text-align: center !important;
+  }
+
+  .stats-cta .btn-subscribe {
+    width: 100% !important;
+    max-width: 340px !important;
+    justify-content: center !important;
+    display: flex !important;
+    margin: 0 auto !important;
+  }
+}
+
+/* ── 8. PROGRAMS PAGE ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .programs-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .filter-bar {
+    flex-direction: column !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+
+  .filter-tabs {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    gap: 6px !important;
+  }
+
+  .filter-tabs::-webkit-scrollbar { display: none !important; }
+
+  .programs-search {
+    width: 100% !important;
+  }
+}
+
+/* ── 9. GALLERY PAGE ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .gallery-grid {
+    columns: 2 !important;
+    gap: 10px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .gallery-grid {
+    columns: 1 !important;
+  }
+}
+
+/* ── 10. CONTACT PAGE ───────────────────────────────────────── */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+}
+
+/* ── 11. CHANNEL BANNER (videos page) ──────────────────────── */
+@media (max-width: 640px) {
+  .channel-banner {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 24px 18px !important;
+    gap: 18px !important;
+  }
+
+  .channel-banner-cta .btn-subscribe {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  .channel-banner-tags {
+    justify-content: center !important;
+  }
+}
+
+/* ── 12. SUBSCRIBE CTA CARD ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .subscribe-cta-card {
+    padding: 36px 20px !important;
+    border-radius: 16px !important;
+  }
+
+  .subscribe-cta-card h2 {
+    font-size: 22px !important;
+  }
+
+  .subscribe-cta-card p {
+    font-size: 14px !important;
+  }
+
+  .subscribe-cta-card .btn-subscribe {
+    width: 100% !important;
+    justify-content: center !important;
+    font-size: 15px !important;
+    padding: 14px 20px !important;
+  }
+}
+
+/* ── 13. FOOTER ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    text-align: center !important;
+  }
+
+  .footer-links ul {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: center !important;
+    padding-top: 16px !important;
+  }
+
+  .social-links {
+    justify-content: center !important;
+  }
+
+  .footer-contact {
+    text-align: center !important;
+  }
+}
+
+/* ── 14. COUNTDOWN TIMER ────────────────────────────────────── */
+@media (max-width: 768px) {
+  .countdown {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+
+  .countdown-box {
+    min-width: 64px !important;
+    padding: 12px 8px !important;
+  }
+
+  .countdown-number {
+    font-size: 32px !important;
+  }
+}
+
+/* ── 15. UPCOMING PROGRAM SECTION ───────────────────────────── */
+@media (max-width: 768px) {
+  .upcoming-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  .upcoming-image {
+    max-height: 250px !important;
+  }
+}
+
+/* ── 16. EXTRA SMALL PHONES (<400px) ───────────────────────── */
+@media (max-width: 400px) {
+  .hero-title { font-size: 26px !important; }
+  .page-hero-title { font-size: 24px !important; }
+  .section-title { font-size: 20px !important; }
+  .container { padding-inline: 14px !important; }
+  .subscribe-cta-card { padding: 28px 14px !important; }
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+  .mobile-menu__inner { padding: 12px 14px 24px !important; }
+  .hamburger { width: 38px !important; height: 38px !important; }
+}
+
+/* ── 17. TABLET (769px – 1024px) ───────────────────────────── */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .home-videos-grid,
+  .videos-fixed-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .about-main-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 36px !important;
+  }
+
+  .mission-vision-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .coverage-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── 18. PREVENT HORIZONTAL OVERFLOW ────────────────────────── */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .section-badge {
+    font-size: 10px !important;
+  }
+}
